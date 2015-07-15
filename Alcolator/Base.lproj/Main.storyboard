@@ -24,14 +24,23 @@
                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="LX2-g0-VGm"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="% Alcohol Content per Bee" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B6J-qW-q0d">
                                 <rect key="frame" x="16" y="28" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldDidChange:" destination="vXZ-lx-hvc" eventType="editingDidEnd" id="4US-ao-F4t"/>
+                                </connections>
                             </textField>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="WQC-nY-SJC">
                                 <rect key="frame" x="14" y="66" width="572" height="31"/>
+                                <connections>
+                                    <action selector="sliderValueDidChange:" destination="vXZ-lx-hvc" eventType="valueChanged" id="nz2-IJ-tYf"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdj-CJ-TAy">
                                 <rect key="frame" x="31" y="148" width="538" height="21"/>
@@ -59,9 +68,18 @@
                             <outletCollection property="gestureRecognizers" destination="ACj-YH-3bi" appends="YES" id="1QX-7N-Mcz"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="beerCountSlider" destination="WQC-nY-SJC" id="bDd-MY-3Ox"/>
+                        <outlet property="beerPercentTextField" destination="B6J-qW-q0d" id="B9Y-rP-gzf"/>
+                        <outlet property="resultLabel" destination="Fdj-CJ-TAy" id="gme-Ag-81L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="ACj-YH-3bi"/>
+                <tapGestureRecognizer id="ACj-YH-3bi">
+                    <connections>
+                        <action selector="tapGestureDidFire:" destination="vXZ-lx-hvc" id="cdk-gk-Jwh"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
         </scene>
     </scenes>
