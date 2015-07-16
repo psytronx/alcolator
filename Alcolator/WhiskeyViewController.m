@@ -20,10 +20,13 @@
     self.drinkType = @"Whiskey";
     self.navigationItem.title = self.drinkType;
 }
-
-- (void)buttonPressed:(UIButton *)sender;
-{
+- (IBAction)buttonPressed:(UIButton *)sender {
+    
     [self.beerPercentTextField resignFirstResponder];
+    [self recalculateAndRefreshText];
+}
+
+- (void)recalculateAndRefreshText {
     
     int numberOfBeers = self.beerCountSlider.value;
     int ouncesInOneBeerGlass = 12;  //assume they are 12oz beer bottles

@@ -45,6 +45,11 @@
 - (IBAction)buttonPressed:(UIButton *)sender {
     
     [self.beerPercentTextField resignFirstResponder];
+    [self recalculateAndRefreshText];
+}
+
+- (void)recalculateAndRefreshText {
+    
     // first, calculate how much alcohol is in all those beers...
     int numberOfBeers = self.beerCountSlider.value;
     int ouncesInOneBeerGlass = 12;  //assume they are 12oz beer bottles
