@@ -15,7 +15,6 @@
 		5235A4971B56B4300034FA7B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5235A4951B56B4300034FA7B /* LaunchScreen.xib */; };
 		5235A4A31B56B4300034FA7B /* AlcolatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5235A4A21B56B4300034FA7B /* AlcolatorTests.m */; };
 		5235A4AE1B57061D0034FA7B /* WhiskeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5235A4AD1B57061D0034FA7B /* WhiskeyViewController.m */; };
-		5235A4B11B5846980034FA7B /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5235A4B01B5846980034FA7B /* MainMenuViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +43,6 @@
 		5235A4A21B56B4300034FA7B /* AlcolatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlcolatorTests.m; sourceTree = "<group>"; };
 		5235A4AC1B57061D0034FA7B /* WhiskeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhiskeyViewController.h; sourceTree = "<group>"; };
 		5235A4AD1B57061D0034FA7B /* WhiskeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhiskeyViewController.m; sourceTree = "<group>"; };
-		5235A4AF1B5846980034FA7B /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
-		5235A4B01B5846980034FA7B /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +94,6 @@
 				5235A4861B56B4300034FA7B /* Supporting Files */,
 				5235A4AC1B57061D0034FA7B /* WhiskeyViewController.h */,
 				5235A4AD1B57061D0034FA7B /* WhiskeyViewController.m */,
-				5235A4AF1B5846980034FA7B /* MainMenuViewController.h */,
-				5235A4B01B5846980034FA7B /* MainMenuViewController.m */,
 			);
 			path = Alcolator;
 			sourceTree = "<group>";
@@ -233,7 +228,6 @@
 				5235A4AE1B57061D0034FA7B /* WhiskeyViewController.m in Sources */,
 				5235A48C1B56B4300034FA7B /* AppDelegate.m in Sources */,
 				5235A4891B56B4300034FA7B /* main.m in Sources */,
-				5235A4B11B5846980034FA7B /* MainMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
