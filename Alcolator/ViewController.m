@@ -37,13 +37,17 @@
 - (IBAction)sliderValueDidChange:(UISlider *)sender {
     NSLog(@"Slider value changed to %f", sender.value);
     [self.beerPercentTextField resignFirstResponder];
-    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) sender.value]];
+    [self calculateAndUpdateText];
 }
 
 
 - (IBAction)buttonPressed:(UIButton *)sender {
     
     [self.beerPercentTextField resignFirstResponder];
+    [self calculateAndUpdateText];
+}
+
+- (void)calculateAndUpdateText {
     // first, calculate how much alcohol is in all those beers...
     int numberOfBeers = self.beerCountSlider.value;
     int ouncesInOneBeerGlass = 12;  //assume they are 12oz beer bottles
@@ -71,6 +75,9 @@
     // generate the result text, and display it on the label
     NSString *resultText = [NSString stringWithFormat:NSLocalizedString(@"%d %@ (with %.2f%% alcohol) contains as much alcohol as %.1f %@ of wine.", nil), numberOfBeers, beerText,  [self.beerPercentTextField.text floatValue], numberOfWineGlassesForEquivalentAlcoholAmount, wineText];
     self.resultLabel.text = resultText;
+    // update badge in tab item
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) ceilf(numberOfWineGlassesForEquivalentAlcoholAmount)]];
+    
 }
 
 - (IBAction)tapGestureDidFire:(UITapGestureRecognizer *)sender {
